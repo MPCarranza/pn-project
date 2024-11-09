@@ -1,5 +1,4 @@
 "use client";
-import { FiDownload } from "react-icons/fi";
 
 const Presentation: React.FC = () => {
   return (
