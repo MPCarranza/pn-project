@@ -40,7 +40,7 @@ const PatchNotes: React.FC = () => {
                 text: "Hemos ampliado y retocado items en nuestra tienda.",
               },
             ]}
-            link="../Html/infoPatch_Notes/SeasonStart/SeasonStart.html"
+            link="infopatch/seasonstart"
           />
 
           <PatchCard
@@ -60,7 +60,7 @@ const PatchNotes: React.FC = () => {
                 text: "Se han balanceado varias habilidades para asegurar una competencia justa y emocionante entre todas las clases.",
               },
             ]}
-            link="parche_1.0.html"
+            link="parcheuno"
           />
 
           <PatchCard
@@ -80,7 +80,7 @@ const PatchNotes: React.FC = () => {
                 text: "Las notificaciones de eventos ahora mostrarán el tiempo restante para participar, asegurando que no te pierdas ninguna oportunidad.",
               },
             ]}
-            link="parche_2.0.html"
+            link="parchedos"
           />
 
           <PatchCard
@@ -103,7 +103,7 @@ const PatchNotes: React.FC = () => {
                 text: "Se han implementado mejoras en la navegación de la tienda para que puedas encontrar fácilmente los productos que deseas.",
               },
             ]}
-            link="parche_3.0.html"
+            link="parchetres"
           />
         </div>
       </main>
