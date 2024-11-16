@@ -1,10 +1,11 @@
+"use client";
 import React from "react";
-import ContentSection from "../../../components/SkillsManagement";
+import SkillsManagement from "./../../components/SpectralDancerTable";
 
 const page = () => {
   return (
     <div className="mx-2 mb-20">
-      <ContentSection />
+      <SkillsManagement />
     </div>
   );
 };

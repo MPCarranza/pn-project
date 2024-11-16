@@ -5,7 +5,7 @@ const Presentation: React.FC = () => {
     <div className="container h-full px-4 mx-auto sm:px-6 lg:px-8">
       <div className="flex flex-col items-center justify-start ml-20 xl:flex-row xl:pt-8 xl:pb-32">
         {/* Text */}
-        <div className="order-2 text-center xl:text-left xl:order-none">
+        <div className="order-2 text-center xl:text-left xl:order-none text-shadow">
           <h3 className="my-4">
             <span className="ml-1 text-2xl font-semibold sm:text-3xl font-AgrandirThinItalic">
               Bienvenido al Proyecto

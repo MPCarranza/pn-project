@@ -10,24 +10,11 @@ const PatchNotes: React.FC = () => {
           <h2 className="text-2xl font-bold text-white">
             Dusk: Notas de la Actualización
           </h2>
-          <p className="mt-2 text-white">
+          <p className="mt-2 text-white mb-6">
             ¡Bienvenido a las notas de parche! Aquí encontrarás detalles sobre
             los cambios y mejoras implementados en nuestro juego.
           </p>
-          <p className="text-white">
-            A medida que nuestro proyecto evoluciona, lanzaremos emocionantes
-            actualizaciones que enriquecerán tu experiencia de juego.
-          </p>
-          <p className="text-white">
-            Permanece atento a los nuevos cambios realizados para mantenerte al
-            día con nuestro progreso diario y no perderte ninguna novedad.
-          </p>
-        </section>
-
-        {/* Contenedor de parches en tarjetas */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-4">
-          {/* Componente de Tarjeta de Parche */}
-          <PatchCard
+          <PatchCardMaster
             title="Cambios de inicio de temporada"
             description={[
               { label: "Personajes:", text: "Nuevas habilidades y ajustes." },
@@ -42,6 +29,11 @@ const PatchNotes: React.FC = () => {
             ]}
             link="infopatch/seasonstart"
           />
+        </section>
+
+        {/* Contenedor de parches en tarjetas */}
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {/* Componente de Tarjeta de Parche */}
 
           <PatchCard
             title="Parche 1.0"
@@ -60,7 +52,7 @@ const PatchNotes: React.FC = () => {
                 text: "Se han balanceado varias habilidades para asegurar una competencia justa y emocionante entre todas las clases.",
               },
             ]}
-            link="parcheuno"
+            link="infopatch/patchone"
           />
 
           <PatchCard
@@ -80,7 +72,7 @@ const PatchNotes: React.FC = () => {
                 text: "Las notificaciones de eventos ahora mostrarán el tiempo restante para participar, asegurando que no te pierdas ninguna oportunidad.",
               },
             ]}
-            link="parchedos"
+            link="infopatch/patchtwo"
           />
 
           <PatchCard
@@ -103,7 +95,7 @@ const PatchNotes: React.FC = () => {
                 text: "Se han implementado mejoras en la navegación de la tienda para que puedas encontrar fácilmente los productos que deseas.",
               },
             ]}
-            link="parchetres"
+            link="infopatch/patchthree"
           />
         </div>
       </main>
@@ -118,8 +110,30 @@ type PatchCardProps = {
   link: string;
 };
 
+const PatchCardMaster: React.FC<PatchCardProps> = ({
+  title,
+  description,
+  link,
+}) => (
+  <div className="flex justify-center">
+    <div className="p-6 bg-white rounded-lg shadow-md w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl">
+      <h2 className="mb-4 text-xl font-semibold text-gray-950">{title}</h2>
+      {description.map((item, index) => (
+        <p key={index} className="mb-2 text-gray-950 text-start">
+          <strong>{item.label}</strong> {item.text}
+        </p>
+      ))}
+      <Link
+        href={link}
+        className="p-2 px-3 text-black transition-transform border-2 border-black rounded-full bg-amber-300 font-AgrandirRegular hover:scale-95">
+        ver detalles
+      </Link>
+    </div>
+  </div>
+);
+
 const PatchCard: React.FC<PatchCardProps> = ({ title, description, link }) => (
-  <div className="p-6 bg-white rounded-lg shadow-md">
+  <div className="p-6 bg-white rounded-lg shadow-md w-full max-w-xs sm:max-w-sm md:max-w-md ">
     <h2 className="mb-4 text-xl font-semibold text-gray-950">{title}</h2>
     {description.map((item, index) => (
       <p key={index} className="mb-2 text-gray-950">

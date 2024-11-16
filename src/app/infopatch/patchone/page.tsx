@@ -1,10 +1,10 @@
 import React from "react";
-import ContentSection from "../../../components/SkillsManagement";
+import PatchOneComponent from "@/components/PatchOne";
 
 const page = () => {
   return (
     <div className="mx-2 mb-20">
-      <ContentSection />
+      <PatchOneComponent />
     </div>
   );
 };

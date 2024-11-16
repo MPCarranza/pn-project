@@ -20,8 +20,8 @@ const links: LinkItem[] = [
     path: "/",
   },
   {
-    name: "news",
-    path: "/news",
+    name: "class guide",
+    path: "/classguide",
   },
 
   {
