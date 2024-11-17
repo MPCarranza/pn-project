@@ -21,7 +21,7 @@ const links: LinkItem[] = [
   },
   {
     name: "class guide",
-    path: "/classguide",
+    path: "/guidebalance",
   },
 
   {

@@ -15,7 +15,7 @@ const links: LinkItem[] = [
   },
   {
     name: "class guide",
-    path: "/class guide",
+    path: "/guidebalance",
   },
 ];
 
@@ -50,8 +50,8 @@ const Nav: React.FC = () => {
           key={index}
           onClick={() => handleNavigation(link)}
           className={`${
-            link.path === pathname && "bg-black "
-          } rounded-full bg-black px-2 font-AgrandirRegular border-2 border-blacky shadow-[5px_5px_0px_0px_rgba(44,44,44,1)] transition-transform hover:scale-95 `}>
+            link.path === pathname && "bg-slate-200 "
+          } rounded-full bg-slate-200 text-slate-950 px-2 font-AgrandirRegular border-2 border-blacky shadow-[5px_5px_0px_0px_rgba(44,44,44,1)] transition-transform hover:scale-95 `}>
           {link.name}
         </button>
       ))}
